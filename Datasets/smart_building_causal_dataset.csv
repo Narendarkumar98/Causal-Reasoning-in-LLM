@@ -1,0 +1,21 @@
+question,answer,level,scenario
+"When the thermostat is incorrectly set too high, does the room temperature usually rise above comfort levels?",Yes,Observational,HVAC
+Is there a historical association between blocked vents and overheating in the building logs?,Yes,Observational,HVAC
+"If we manually set the thermostat to 22°C (do(set_temp=22)), will the overheating likely reduce?",Yes,Interventional,HVAC
+"If all vents are forced open (do(vents=open)), will airflow improve and reduce overheating?",Yes,Interventional,HVAC
+"The room overheated because the thermostat was set at 30°C. If the thermostat had been set correctly at 22°C, would the room still have overheated?",No,Counterfactual,HVAC
+"The HVAC system malfunctioned and caused overheating. If the malfunction had not occurred, would the temperature have remained normal?",Yes,Counterfactual,HVAC
+"The vents were blocked and overheating happened. If the vents had not been blocked, would the overheating still likely occur?",No,Counterfactual,HVAC
+Does the security alarm often activate when the hallway motion sensor detects sudden spikes at night?,Yes,Observational,Security
+Is there a correlation between strong Wi-Fi interference and false sensor activations?,Yes,Observational,Security
+"If we disable the hallway sensor temporarily (do(sensor=off)), will the alarm stop triggering?",Yes,Interventional,Security
+"If we reduce sensor sensitivity manually (do(sensitivity=low)), will the false alarms likely decrease?",Yes,Interventional,Security
+"The alarm went off because the sensor malfunctioned. If the sensor had not malfunctioned, would the alarm still have triggered?",No,Counterfactual,Security
+"A false alarm occurred due to strong electromagnetic interference. If no interference had been present, would the alarm have triggered?",No,Counterfactual,Security
+"A false alarm happened after a power fluctuation. If the power had remained stable, would the alarm still have gone off?",No,Counterfactual,Security
+"When occupancy is mis-detected as zero, do lights often turn off unexpectedly?",Yes,Observational,Lighting
+Is incorrect occupancy detection frequently associated with rapid lighting toggles?,Yes,Observational,Lighting
+"If we force the occupancy sensor to 'occupied' (do(occupancy=1)), will the lights remain ON regardless of detection errors?",Yes,Interventional,Lighting
+"If we manually override the lights to ON (do(light=on)), will the anomaly of lights flickering stop?",Yes,Interventional,Lighting
+"Lights turned OFF because the system mis-detected zero occupancy. If the system had detected occupancy correctly, would the lights have stayed ON?",Yes,Counterfactual,Lighting
+"The lights flickered because the occupancy sensor sent conflicting readings. If the sensor had not malfunctioned, would the lights still flicker?",No,Counterfactual,Lighting

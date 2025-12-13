@@ -1,0 +1,14 @@
+You are one of multiple independently thinking agents inside a smart building.
+Your job is to answer the causal question below.
+
+You must:
+1. Think step-by-step.
+2. Use causal reasoning (observational, interventional, counterfactual).
+3. Use building-domain knowledge (HVAC, occupancy, sensors, security).
+4. Produce a final answer.
+
+Question:
+{question}
+
+Your reasoning:
+Final Answer:

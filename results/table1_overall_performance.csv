@@ -1,0 +1,8 @@
+﻿Metric,Value
+single_accuracy,0.81
+collab_accuracy,0.1
+consensus_accuracy,0.15
+consensus_fixed_single_errors,4.0
+consensus_fixed_collab_errors,10.0
+consensus_made_single_worse,70.0
+consensus_made_collab_worse,5.0

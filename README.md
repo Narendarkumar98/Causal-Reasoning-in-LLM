@@ -10,17 +10,17 @@ We evaluate three reasoning configurations using Llama-3.1-8B-Instruct:
    A third agent aggregates the final outputs of the collaborative agents into a single response.
   All configurations use identical prompts and inference parameters to ensure fairness.
   **Evaluation Dataset:**
- >Total questions: 20 expert-designed causal questions
+ >Total questions: 100 designed causal questions
 
 >Smart-building subsystems:
- i. HVAC (7)
-ii. Lighting (6)
-iii. Security (7)
+ i. HVAC (35)
+ii. Lighting (30)
+iii. Security (35)
 
 **Pearl’s causal hierarchy:**
-i. Observational (6)
-ii. Interventional (6)
-iii. Counterfactual (8)
+i. Observational (30)
+ii. Interventional (30)
+iii. Counterfactual (40)
 
 Questions are derived from canonical smart-building sensing, control, and policy-intervention scenarios.
 **Metrics:**
@@ -32,6 +32,6 @@ Number of errors corrected by consensus
 Number of previously correct answers degraded by consensus
 **Key observations:**
 The single-agent model consistently outperforms multi-agent setups.
-Consensus reasoning corrects only a few errors (3–4 cases) but degrades many correct single-agent answers (12 cases).
+Consensus reasoning corrects only a few errors (4 cases) but degrades many correct single-agent answers (70 cases).
 Collaborative reasoning performs better on counterfactual questions, but fails on observational and interventional ones.
 These results suggest that naive multi-agent interaction can reduce reliability in causal reasoning tasks.
